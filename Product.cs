@@ -7,7 +7,7 @@ public class Product
     public int ProductId { get; set; }
 
     [Required]
-    [Display(Name = "Category")]
+    [Display(Name = "CategoryId")]
     public int? CategoryId { get; set; }
 
     [Required] public string Name { get; set; } = string.Empty;
@@ -16,8 +16,6 @@ public class Product
 
     [Required] [Range(0, int.MaxValue)] public double? Price { get; set; }
 
-    public Category? Category { get; set; }
-    
     //## Navigation for ef core
-    public List<Category>? Categories { get; set; }
+    public Category? Category { get; set; }
 }
